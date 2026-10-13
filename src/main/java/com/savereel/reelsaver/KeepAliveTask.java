@@ -12,8 +12,7 @@ public class KeepAliveTask {
         try {
             RestTemplate restTemplate = new RestTemplate();
 
-            // ⚠️ REPLACE THIS with your exact Render URL
-            String url = "https://onrender.com";
+            String url = "https://reel-saver-7qme.onrender.com";
 
             restTemplate.getForObject(url, String.class);
             System.out.println("Self-ping successful. App is staying awake!");

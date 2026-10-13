@@ -5,10 +5,7 @@ import com.savereel.reelsaver.Service.ReelsService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/reels")
@@ -30,6 +27,11 @@ public class ReelsController {
         }
         else return ResponseEntity.ok("Reel saved into Database");
 
+    }
+
+    @GetMapping("/")
+    public String home() {
+        return "Server is up and running!";
     }
 
     // update Custom Message
